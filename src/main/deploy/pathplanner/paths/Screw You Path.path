@@ -101,12 +101,19 @@
   "constraintZones": [],
   "eventMarkers": [
     {
-      "name": "intakeNote",
+      "name": "IntakeOn",
       "waypointRelativePos": 0.8,
       "command": {
-        "type": "parallel",
+        "type": "sequential",
         "data": {
-          "commands": []
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "IntakeOn"
+              }
+            }
+          ]
         }
       }
     },

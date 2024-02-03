@@ -5,12 +5,17 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.Intake;
 
 public class IntakeOn extends Command {
   /** Creates a new IntakeIn. */
-  public IntakeOn() {
+
+   private final Intake m_Intake;
+
+  public IntakeOn(Intake subsystem) {
     // Use addRequirements() here to declare subsystem dependencies.
-    
+    m_Intake = subsystem;
+    addRequirements(m_Intake);
   }
 
   // Called when the command is initially scheduled.
@@ -19,11 +24,16 @@ public class IntakeOn extends Command {
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {}
+  public void execute() {
+    m_Intake.runIntakeSpeed(-.50, -.50);
+
+  }
 
   // Called once the command ends or is interrupted.
   @Override
-  public void end(boolean interrupted) {}
+  public void end(boolean interrupted) {
+    m_Intake.runIntakeSpeed(0, 0);
+  }
 
   // Returns true when the command should end.
   @Override

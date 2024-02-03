@@ -1,6 +1,7 @@
 package frc.robot;
 
 import com.pathplanner.lib.auto.AutoBuilder;
+import com.pathplanner.lib.auto.NamedCommands;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
@@ -43,9 +44,12 @@ public class RobotContainer {
     //private final JoystickButton shootButton = new JoystickButton(driver2, XboxController.Button.kX.value) ;
 
     /* Subsystems */
-    /* Added Subsystems 1/22 */
     private final Swerve s_Swerve = new Swerve();
-   // private final Intake Intake = new Intake();
+    private final Intake m_Intake = new Intake();
+
+   
+  
+
    // private final Climber m_climber = new Climber();
     //private
 
@@ -61,6 +65,11 @@ public class RobotContainer {
             )
         );
 
+
+         //register named commands
+    NamedCommands.registerCommand("IntakeOn", new IntakeOn(m_Intake));
+
+    
         // Configure the button bindings
         configureButtonBindings();
 
