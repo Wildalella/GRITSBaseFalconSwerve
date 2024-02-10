@@ -40,12 +40,16 @@ public class RobotContainer {
     private final JoystickButton zeroGyro = new JoystickButton(driver, XboxController.Button.kY.value);
     private final JoystickButton robotCentric = new JoystickButton(driver, XboxController.Button.kLeftBumper.value);
 
+
+
     /* TEST TEST TEST Driver Command Buttons JUST A TEST TEST TEST TEST 1/22 */
     //private final JoystickButton shootButton = new JoystickButton(driver2, XboxController.Button.kX.value) ;
 
     /* Subsystems */
     private final Swerve s_Swerve = new Swerve();
     private final Intake m_Intake = new Intake();
+    private final Limelight m_LimeLight = new Limelight();
+    private final Blinkin m_Blinkin = new Blinkin();
 
    
   
@@ -77,6 +81,13 @@ public class RobotContainer {
         autoChooser = AutoBuilder.buildAutoChooser();
         SmartDashboard.putData("Auto Chooser", autoChooser);
         
+   /**private void getTarget(getX(), orange()) {
+        if ((getX() >= -5.0) && (getX() <= 5.0)) {
+            m_Blinkin.orange();
+        }
+
+   }
+ */
     }
 
     /**

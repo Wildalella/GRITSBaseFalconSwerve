@@ -131,6 +131,10 @@ public final class Constants {
         }
     }
 
+     public static final class Blinkin {
+            public static final int blinkinPort = 9;//change port to the correct one for alpha robot
+        }
+
     public static final class IntakeConstants {
         public static final int intakeOuter = 3;
         public static final int intakeInner = 4;
@@ -146,6 +150,7 @@ public final class Constants {
         public static final double kPXController = 1;
         public static final double kPYController = 1;
         public static final double kPThetaController = 1;
+
     
         /* Constraint for the motion profilied robot angle controller */
         public static final TrapezoidProfile.Constraints kThetaControllerConstraints =
