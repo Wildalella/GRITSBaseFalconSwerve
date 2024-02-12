@@ -20,7 +20,7 @@ public class Blinkin extends SubsystemBase {
 
   public Blinkin() {
 
-     blinkin = new Spark(Constants.Blinkin.blinkinPort);
+   //  blinkin = new Spark(Constants.Blinkin.blinkinPort);
   }
 
   @Override
@@ -36,6 +36,11 @@ public class Blinkin extends SubsystemBase {
   public void green() {
     blinkin.set(0.77);
   }
+
+  public void random() {
+    blinkin.set(0.30);
+  }
+
 
 
 }
